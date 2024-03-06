@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Hydac.Views;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,5 +21,31 @@ namespace Hydac
         {
             InitializeComponent();
         }
+
+        private void NavigateToCustomerOverview(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new CustomerOverviewView());
+        }
+
+        private void NavigateToAddCustomer(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new AddCustomerView());
+        }
+
+        private void NavigateToComponentOverview(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new ComponentOverviewView());
+        }
+
+        private void NavigateToAddComponent(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new AddComponentView());
+        }
+
+        private void NavigateToSetServiceInterval(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new UpdateComponentView());
+        }
+        
     }
 }
