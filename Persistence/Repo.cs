@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace Hydac.Persistence
 {
-    public abstract class Repo
+    public abstract class Repo<T>
     {
-        protected ObservableCollection<Repo> repo;
+        protected ObservableCollection<T> repo = new ObservableCollection<T> { };
 
-        public bool AddItem(Repo item)
+        public bool AddItem(T item)
         {
             repo.Add(item);
             return true;
         }
 
-        public ObservableCollection<Repo> GetItems()
+        public ObservableCollection<T> GetItems()
         {
             return repo;
         }
 
-        public bool RemoveItem(Repo item)
+        public bool RemoveItem(T item)
         {
             repo.Remove(item);
             return true;
