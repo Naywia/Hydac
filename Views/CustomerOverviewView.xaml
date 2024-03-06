@@ -9,6 +9,21 @@
       Title="CustomerOverviewView">
 
     <Grid>
-        
+        <ListView ItemsSource="{Binding Customers}">
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Navn" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Kontaktperson" Width="150" DisplayMemberBinding="{Binding Contact}"/>
+                    <GridViewColumn Header="Telefonnummer" Width="150" DisplayMemberBinding="{Binding PhoneNumber}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
