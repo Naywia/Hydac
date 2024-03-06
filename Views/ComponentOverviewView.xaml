@@ -9,6 +9,25 @@
       Title="ComponentOverviewView">
 
     <Grid>
-        
+        <ListView ItemsSource="{Binding Components}">
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Navn" Width="100" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Delnummer" Width="100" DisplayMemberBinding="{Binding PartNumber}"/>
+                    <GridViewColumn Header="Serienummer" Width="100" DisplayMemberBinding="{Binding SerialNumber}"/>
+                    <GridViewColumn Header="Varenummer" Width="100" DisplayMemberBinding="{Binding ItemNumber}"/>
+                    <GridViewColumn Header="Parti" Width="100" DisplayMemberBinding="{Binding Batch}"/>
+                    <GridViewColumn Header="Type" Width="100" DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Header="Serviceinterval" Width="110" DisplayMemberBinding="{Binding ServiceInterval}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

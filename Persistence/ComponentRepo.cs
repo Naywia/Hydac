@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hydac.Models;
 
 namespace Hydac.Persistence
 {
-    public class ComponentRepo : Repo
+    public class ComponentRepo : Repo<Component>
     {
-        public void UpdateServiceInterval()
+        public ComponentRepo() {
+            AddItem(new Component("a", "b", "c", "d", "e", "f", 7));
+        }
+        public void UpdateServiceInterval(Component component)
         {
-            
+            Component c = repo.FirstOrDefault(x => x.ItemNumber == component.ItemNumber);
+            int i = repo.IndexOf(c);
+            repo[i] = component;
         }
     }
 }

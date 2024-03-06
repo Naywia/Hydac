@@ -9,6 +9,47 @@
       Title="UpdateComponentView">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Column="1" Grid.Row="1" Content="Navn"/>
+        <TextBox Grid.Column="2" Grid.Row="1" Text="{Binding Component.Name}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Delnummer"/>
+        <TextBox Grid.Column="2" Grid.Row="3" Text="{Binding Component.PartNumber}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="5" Content="Serienummer"/>
+        <TextBox Grid.Column="2" Grid.Row="5" Text="{Binding Component.SerialNumber}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="7" Content="Varenummer"/>
+        <TextBox Grid.Column="2" Grid.Row="7" Text="{Binding Component.ItemNumber}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="9" Content="Parti"/>
+        <TextBox Grid.Column="2" Grid.Row="9" Text="{Binding Component.Batch}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="11" Content="Type"/>
+        <TextBox Grid.Column="2" Grid.Row="11" Text="{Binding Component.Type}" IsEnabled="False"/>
+        <Label Grid.Column="1" Grid.Row="13" Content="Serviceinterval"/>
+        <TextBox Grid.Column="2" Grid.Row="13" Text="{Binding Component.ServiceInterval}"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="15" Content="Sæt serviceinterval" Command="{Binding UpdateServiceIntervalCommand}"/>
     </Grid>
 </Page>

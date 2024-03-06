@@ -7,10 +7,14 @@ namespace Hydac.ViewModels
     public class ComponentOverviewViewModel
     {
         #region Fields
-        private ComponentRepo componentRepo = new();
+        private ComponentRepo componentRepo = App.ComponentRepo;
         #endregion
 
         #region Constructors
+        public ComponentOverviewViewModel()
+        {
+            Components = componentRepo.GetItems();
+        }
         #endregion
 
         #region Methods
