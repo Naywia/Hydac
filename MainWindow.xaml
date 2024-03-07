@@ -30,7 +30,7 @@
                 <Button Grid.Row="2" Click="NavigateToAddCustomer" Content="Tilføj kunde"/>
                 <Button Grid.Row="3" Click="NavigateToComponentOverview" Content="Komponent-oversigt"/>
                 <Button Grid.Row="4" Click="NavigateToAddComponent" Content="Tilføj komponent"/>
-                <Button Grid.Row="4" Click="NavigateToSetServiceInterval" Content="Sæt serviceinterval for komponent"/>
+                <Button Grid.Row="5" Click="NavigateToSetServiceInterval" Content="Sæt serviceinterval for komponent"/>
             </Grid>
 
             <Frame x:Name="ContentFrame" Source="Views/CustomerOverviewView.xaml" NavigationUIVisibility="Hidden"/>
