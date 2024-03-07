@@ -11,7 +11,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Hydac.ViewModels
 {
-    public class UpdateComponentViewModel
+    public class UpdateComponentViewModel : ObservableObject
     {
         #region Fields
         private ComponentRepo componentRepo = App.ComponentRepo;

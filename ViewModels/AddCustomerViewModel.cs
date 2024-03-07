@@ -5,9 +5,13 @@ using System.Windows.Input;
 
 namespace Hydac.ViewModels
 {
-    public class AddCustomerViewModel
+    public class AddCustomerViewModel : ObservableObject
     {
         #region Fields
+        private string name;
+        private string contact;
+        private int phoneNumber;
+
         private ICommand addCustomerCommand;
         private CustomerRepo customerRepo = App.CustomerRepo;
         #endregion
@@ -42,9 +46,33 @@ namespace Hydac.ViewModels
             }
         }
 
-        public string Name { get; set; }
-        public string Contact { get; set; }
-        public int PhoneNumber { get; set; }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string Contact
+        {
+            get => contact;
+            set
+            {
+                contact = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public int PhoneNumber
+        {
+            get => phoneNumber;
+            set
+            {
+                phoneNumber = value;
+                NotifyPropertyChanged();
+            }
+        }
         #endregion
     }
 }

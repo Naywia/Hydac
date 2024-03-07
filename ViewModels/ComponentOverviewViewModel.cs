@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace Hydac.ViewModels
 {
-    public class ComponentOverviewViewModel
+    public class ComponentOverviewViewModel : ObservableObject
     {
         #region Fields
         private ComponentRepo componentRepo = App.ComponentRepo;

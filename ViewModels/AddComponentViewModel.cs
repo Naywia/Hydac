@@ -10,9 +10,17 @@ using System.Windows.Input;
 
 namespace Hydac.ViewModels
 {
-    public class AddComponentViewModel
+    public class AddComponentViewModel : ObservableObject
     {
         #region Fields
+        private string name;
+        private string partNumber;
+        public string serialNumber;
+        private string itemNumber;
+        private string batch;
+        private string type;
+        private int serviceInterval;
+
         private ComponentRepo componentRepo = App.ComponentRepo;
         private ICommand addComponentCommand;
         #endregion
@@ -41,13 +49,69 @@ namespace Hydac.ViewModels
         #endregion
 
         #region Properties
-        public string Name { get; set; }
-        public string PartNumber { get; set; }
-        public string SerialNumber { get; set; }
-        public string ItemNumber { get; set; }
-        public string Batch { get; set; }
-        public string Type { get; set; }
-        public int ServiceInterval { get; set; }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string PartNumber
+        {
+            get => partNumber;
+            set
+            {
+                partNumber = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string SerialNumber
+        {
+            get => serialNumber;
+            set
+            {
+                serialNumber = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string ItemNumber
+        {
+            get => itemNumber;
+            set
+            {
+                itemNumber = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string Batch
+        {
+            get => batch;
+            set
+            {
+                batch = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public string Type
+        {
+            get => type;
+            set
+            {
+                type = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public int ServiceInterval
+        {
+            get => serviceInterval;
+            set
+            {
+                serviceInterval = value;
+                NotifyPropertyChanged();
+            }
+        }
 
         public ICommand AddComponentCommand
         {
